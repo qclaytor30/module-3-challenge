@@ -122,13 +122,13 @@ function generatePassword() {
   if (!confirmUpper && !confirmLower && !confirmNumber && !confirmSpecial) {
     userChoices = alert("You must choose at least one password criteria.");
 
-    // 4 true
+    // user 4 true choices
   } else if (confirmUpper && confirmLower && confirmNumber && confirmSpecial) {
     userChoices = lowerCase.concat(upperCase, numbers, special);
     console.log(userChoices);
   }
 
-  // 3 true
+  // user 3 true choices
     else if (confirmUpper && confirmLower && confirmNumber) {
       userChoices = upperCase.concat(upperCase, numbers);
       console.log (userChoices);
@@ -144,7 +144,40 @@ function generatePassword() {
       console.log (userChoices);
     }
 
-    // 2 True 
-    
+    // user 2 True choices 
+    else if (confirmLower && confirmUpper) {
+      userChoices = lowerCase.concat(upperCase);
+      console.log (userChoices);
+    }
+    else if (confirmLower && confirmNumber) {
+      userChoices = lowerCase.concat(numbers);
+      console.log(userChoices);
+    }
+    else if (confirmLower && confirmSpecial) {
+      userChoices = lowerCase.concat(special);
+      console.log(userChoices);
+    }
+    else if (confirmUpper && confirmNumber) {
+      userChoices = upperCase.concat(numbers);
+      console.log (userChoices);
+    }
+    else if (confirmUpper && confirmSpecial) {
+      userChoices = upperCase.concat(special);
+      console.log(userChoices);
+    }
+    else if (confirmNumber && confirmSpecial) {
+      userChoices = numbers.concat(special);
+      console.log(userChoices);
+    }
+
+    // user 1 true choice
+    else if (confirmUpper) {
+      userChoices = upperCase;
+      console.log (userChoices);
+    }
+    else if (confirmLower) {
+
+    }
+   
 
 }
