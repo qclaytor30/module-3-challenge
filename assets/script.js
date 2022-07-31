@@ -118,12 +118,14 @@ function generatePassword() {
     console.log("Special Character " + confirmSpecial);
   };
 
-  // If user does not answer
+  // If user does not answer, at least one password criteria must be selected. If none are selected, restart application.
   if (!confirmUpper && !confirmLower && !confirmNumber && !confirmSpecial) {
     userChoices = alert("You must choose at least one password criteria.");
-
-    // user 4 true choices
-  } else if (confirmUpper && confirmLower && confirmNumber && confirmSpecial) {
+    return password;
+  }
+    
+  // user 4 true choices 
+  else if (confirmUpper && confirmLower && confirmNumber && confirmSpecial) {
     userChoices = lowerCase.concat(upperCase, numbers, special);
     console.log(userChoices);
   }
@@ -172,12 +174,35 @@ function generatePassword() {
 
     // user 1 true choice
     else if (confirmUpper) {
-      userChoices = upperCase;
+      userChoices = blankUpper.concat(upperCase);
       console.log (userChoices);
     }
     else if (confirmLower) {
-
+      userChoices = lowerCase;
+      console.log(userChoices);
     }
-   
+    else if (confirmNumber) {
+      userChoices = numbers;
+      console.log (userChoices);
+    }
+    else if (confirmSpecial) {
+      userChoices = special;
+      console.log (userChoices);
+    };
+
+    // password length variable
+    var passwordBnk = [];
+
+    // randomly select a character from selected array 
+    for (var i = 0; i < passwordLength; i++) {
+      var allChoices = userChoices[Math.floor(Math.random() * userChoices.length)];
+      passwordBnk.push(allChoices);
+      console.log(allChoices);
+    }
+
+    // Write password and return
+    var password = passwordBnk.join("");
+    console.log("Your Passwrod is: " + password);
+    return password;
 
 }
