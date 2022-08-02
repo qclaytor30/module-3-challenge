@@ -6,7 +6,7 @@ My task was to make an application that generates a random password using javasc
 <h2>Access</h2>
 
 <h3>GitHub Repository</h3>
-
+https://github.com/qclaytor30/module-3-challenge
 <h3>GitHub Pages</h3>
 
 
