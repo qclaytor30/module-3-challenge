@@ -4,6 +4,7 @@
 My task was to make an application that generates a random password using javascript and meeting certain user citeria.
 
 ## Screenshot of application
+![screenshot](./img/Screen%20Shot%202022-12-21%20at%204.32.46%20PM.png)
 
 <h2>Access</h2>
 
